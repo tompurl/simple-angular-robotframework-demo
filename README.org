@@ -1,0 +1,62 @@
+#+TITLE: Simple Robot Framework / Angular Example - README
+
+* Overview
+
+This is a simple example showing you how you can test "conventional"
+and Angular-based sites using the Robot Framework.
+
+* What Does The Test Do?
+
+  1. Navigate to www.aurorafilmsociety.org
+  2. Click on the Paypal link to purchase a subscription
+  3. Confirm that the text in the Paypal page is correct.
+
+  I've run this test about 100 times on my laptop and have not yet
+  accidentally purchased a subscription, and of course that's not the
+  purpose of the test. However, YMMV.
+
+* Why This Test?
+
+  1. It's a common workflow that a lot of people use (Wordpress -> Paypal)
+  2. It demonstrates how to locate elements in a conventional site
+     (Wordpress) /and/ and Angular site (Paypal).
+
+* Quickstart
+** Install Python 2
+
+   Yup, I know, I know, but it's a requirement at this time. Hopefully
+   the Robot Framework will have better support for Python 3 in the
+   near future.
+
+** Install Your Preferred Webdriver
+
+   For Chrome you need =webdriver= and for Firefox you need
+   =geckodriver=. Installation is pretty simple but outside the scope
+   of this tutorial.
+
+** (Optional) Create a Python 2 Virtualenv
+
+   If this doesn't make sense then it's safe to skip it :-)
+
+** Install the Dependencies
+
+#+BEGIN_EXAMPLE
+
+pip install -r requirements.txt
+
+#+END_EXAMPLE
+
+** Run The Example Automated Test
+
+#+BEGIN_EXAMPLE
+
+# Run the test regularly with Chrome
+robot -d Output .\afs_tests.robot
+
+# Run with verbose logging
+robot -V DEBUG -d Output .\afs_tests.robot
+
+# Run in firefox
+robot -d Output -v "browser:firefox" .\afs_tests.robot
+
+#+END_EXAMPLE
