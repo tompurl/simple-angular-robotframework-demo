@@ -54,7 +54,7 @@ pip install -r requirements.txt
 robot -d Output .\afs_tests.robot
 
 # Run with verbose logging
-robot -V DEBUG -d Output .\afs_tests.robot
+robot -L DEBUG -d Output .\afs_tests.robot
 
 # Run in firefox
 robot -d Output -v "browser:firefox" .\afs_tests.robot
