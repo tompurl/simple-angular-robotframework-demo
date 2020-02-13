@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    All tests for the AFS site.
-Library    ExtendedSelenium2Library
+Library    SeleniumLibrary
 Library    BuiltIn
 
 Resource    ./afs_landing_page_pageobjects.robot
